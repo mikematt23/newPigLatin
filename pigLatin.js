@@ -12,10 +12,6 @@ button.addEventListener("click",function(){
 })
 
 function pigLatin(array){
-  findVowel(array)
-}
-
-function findVowel(array){
 let newWord 
  for (const word of array) {
     if(
@@ -31,7 +27,6 @@ let newWord
       startsWithConstant(word)
     }
  }
- console.log(newWords)
 }
 
 function startsWithConstant(str){
@@ -40,11 +35,8 @@ function startsWithConstant(str){
   for(let i = 0; i< str.length; i++){
     for(let j = 0 ;j< vowels.length;j++ ){
        if(str[i] === vowels[j]){
-        console.log(str[i])
         let beginning = str.substring(0,i)
         let end = str.slice(i)
-        console.log(beginning)
-        console.log(end)
         newWord = end + beginning + "ay"
         newWords.push(newWord)
         return
